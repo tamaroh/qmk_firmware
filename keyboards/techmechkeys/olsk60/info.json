@@ -144,7 +144,7 @@
                 { "matrix": [4, 1], "label": "Win", "x": 1.75, "y": 4,"w": 1.25 },
                 { "matrix": [4, 2], "label": "Alt", "x": 3, "y": 4,"w": 1.25 },
 
-                { "matrix": [4, 4], "label": "Fn", "x": 6.5, "y": 4,"w": 1.25 },
+                { "matrix": [4, 4], "label": "Space", "x": 6.5, "y": 4,"w": 1.25 },
 
                 { "matrix": [9, 5], "label": "Fn", "x": 10.5, "y": 4 },
                 { "matrix": [9, 4], "label": "Left", "x": 11.5, "y": 4 },
