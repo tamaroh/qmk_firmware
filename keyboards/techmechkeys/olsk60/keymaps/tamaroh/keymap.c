@@ -1,5 +1,11 @@
 #include QMK_KEYBOARD_H
+void eeconfig_init_kb(void) {  // EEPROM is getting reset!
+    rgblight_enable();                      // Enable RGB by default
+    rgblight_mode(RGBLIGHT_MODE_RGB_TEST);  // set to RGBLIGHT_MODE_RGB_TEST by default
 
+    eeconfig_update_kb(0);
+    eeconfig_init_user();
+}
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      *    ┌───┬───┬───┬───┬───┬───┐  ┌───┬───┬───┬───┬───┬────────┐
