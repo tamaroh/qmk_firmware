@@ -23,5 +23,5 @@
 #define PERMISSIVE_HOLD
 // #define IGNORE_MOD_TAP_INTERRUPT
 
-#define RGBLED_NUM 1
 #define RGB_DI_PIN GP9
+#define RGBLED_NUM 1
