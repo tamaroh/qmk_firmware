@@ -11,7 +11,7 @@
         "console": false,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true
+        "rgblight": true
     },
     "matrix_pins": {
         "cols": ["GP10", "GP19", "GP20", "GP5", "GP7", "GP8"],
@@ -152,6 +152,14 @@
                 { "matrix": [9, 3], "label": "Down", "x": 12.5, "y": 4 },
                 { "matrix": [9, 2], "label": "Right", "x": 13.5, "y": 4 }
             ]
+        }
+    },
+    "rgblight": {
+        "pin": "GP9",
+        "led_count": 1,
+        "animations": {
+            "rgb_test": true,
+            "breathing": true
         }
     }
 }

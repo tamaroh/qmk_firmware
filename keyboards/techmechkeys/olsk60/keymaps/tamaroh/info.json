@@ -1,7 +1,0 @@
-{
-    "tapping": {
-        "hold_on_other_key_press": true,
-        "permissive_hold": true,
-        "ignore_mod_tap_interrupt": true
-    }
-}
