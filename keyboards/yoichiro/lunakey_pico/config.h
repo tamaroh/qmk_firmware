@@ -36,3 +36,12 @@
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
+#ifdef AUDIO_ENABLE
+  #define AUDIO_PIN GP8
+  #define AUDIO_PWM_DRIVER PWMD4
+  #define AUDIO_PWM_CHANNEL RP2040_PWM_CHANNEL_A
+  #define AUDIO_INIT_DELAY
+  #define STARTUP_SONG SONG(M__NOTE(_C7, 30), M__NOTE(_C6, 30))
+  #define AUDIO_CLICKY
+//   #define AUDIO_VOICES
+#endif
