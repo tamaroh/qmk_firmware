@@ -11,7 +11,8 @@
         "console": false,
         "extrakey": true,
         "mousekey": true,
-        "rgblight": true
+        "rgblight": true,
+        "audio": true
     },
     "matrix_pins": {
         "cols": ["GP10", "GP19", "GP20", "GP5", "GP7", "GP8"],
@@ -161,5 +162,9 @@
             "rgb_test": true,
             "breathing": true
         }
+    },
+    "audio": {
+        "pins": ["GP13"],
+        "voices": true
     }
 }
