@@ -161,7 +161,8 @@
         "animations": {
             "rgb_test": true,
             "breathing": true
-        }
+        },
+        "sleep": true
     },
     "audio": {
         "pins": ["GP13"],
