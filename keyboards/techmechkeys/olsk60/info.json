@@ -157,7 +157,7 @@
     },
     "rgblight": {
         "pin": "GP9",
-        "led_count": 1,
+        "led_count": 22,
         "animations": {
             "rgb_test": true,
             "breathing": true
