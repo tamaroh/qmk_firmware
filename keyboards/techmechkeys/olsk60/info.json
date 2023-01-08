@@ -167,5 +167,9 @@
     "audio": {
         "pins": ["GP13"],
         "voices": true
+    },
+    "tapping": {
+        "permissive_hold": true,
+        "hold_on_other_key_press": true
     }
 }
