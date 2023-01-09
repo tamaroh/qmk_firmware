@@ -12,7 +12,8 @@
         "extrakey": true,
         "mousekey": true,
         "rgblight": true,
-        "audio": true
+        "audio": true,
+        "via": true
     },
     "matrix_pins": {
         "cols": ["GP10", "GP19", "GP20", "GP5", "GP7", "GP8"],
