@@ -2,9 +2,14 @@
     "keyboard_name": "mysplit",
     "maintainer": "Tamaroh",
     "manufacturer": "Tamaroh",
+    "url": "",
+    "development_board": "promicro",
     "processor": "atmega32u4",
     "bootloader": "caterina",
     "diode_direction": "COL2ROW",
+    "features": {
+        "via": true
+    },
     "layouts": {
         "LAYOUT_split_3x6_3": {
             "layout": [
