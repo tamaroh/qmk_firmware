@@ -8,7 +8,7 @@
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "features": {
-        "via": true
+        "via": false
     },
     "matrix_pins": {
         "rows": ["GP11", "GP12", "GP13", "GP14"],
