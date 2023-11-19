@@ -12,7 +12,8 @@
         "console": false,
         "extrakey": false,
         "mousekey": false,
-        "nkro": false
+        "nkro": false,
+        "encoder": true
     },
     "matrix_pins": {
         "cols": ["F6", "F7", "B1", "B3", "B2", "B6", "C6", "D7", "E6", "B4", "B5"],
@@ -26,6 +27,14 @@
         "device_version": "1.0.0",
         "pid": "0x0004",
         "vid": "0x1234"
+    },
+    "encoder": {
+        "rotary": [
+            {
+                "pin_a": "F4",
+                "pin_b": "F5"
+            }
+        ]
     },
     "layouts": {
         "LAYOUT": {
