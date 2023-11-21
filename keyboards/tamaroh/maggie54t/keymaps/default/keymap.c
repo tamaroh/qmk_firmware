@@ -35,12 +35,5 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,
         KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,
         KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1
-    ),
-    [3] = LAYOUT(
-        KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,
-        KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,
-        KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,
-        KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,
-        KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1,KC_1
-    ),
+    )
 };

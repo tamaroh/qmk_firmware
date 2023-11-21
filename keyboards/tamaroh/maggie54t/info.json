@@ -6,7 +6,7 @@
     "processor": "atmega32u4",
     "bootloader": "caterina",
     "features": {
-        "via": false,
+        "via": true,
         "bootmagic": false,
         "command": false,
         "console": false,
