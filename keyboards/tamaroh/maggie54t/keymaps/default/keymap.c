@@ -2,12 +2,7 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
-enum layer_number {
-    _BASE = 0,
-    _LOWER = 1,
-    _RAISE = 2,
-    _TRACKBALL = 3
-};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
         KC_ESC,     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_GRV,
@@ -30,58 +25,4 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______,                   KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, _______, _______,
                                    _______,   KC_NO, _______, _______, _______, _______, _______, _______
     )
-};
-
-keyevent_t encoder1_ccw = {
-    .key = (keypos_t){.row = 0, .col = 3},
-    .pressed = false
-};
-
-keyevent_t encoder1_cw = {
-    .key = (keypos_t){.row = 0, .col = 4},
-    .pressed = false
-};
-
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { // First encoder 
-        if (clockwise) {
-            encoder1_cw.pressed = true;
-            encoder1_cw.time = (timer_read() | 1);
-            action_exec(encoder1_cw);
-        } else {
-            encoder1_ccw.pressed = true;
-            encoder1_ccw.time = (timer_read() | 1);
-            action_exec(encoder1_ccw);
-        }
-    }
-    return true;
-}
-
-void matrix_scan_user(void) {
-    if (IS_PRESSED(encoder1_ccw)) {
-        encoder1_ccw.pressed = false;
-        encoder1_ccw.time = (timer_read() | 1);
-        action_exec(encoder1_ccw);
-    }
-    if (IS_PRESSED(encoder1_cw)) {
-        encoder1_cw.pressed = false;
-        encoder1_cw.time = (timer_read() | 1);
-        action_exec(encoder1_cw);
-    }
-}
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-    case _LOWER:
-    case _RAISE:
-        cocot_set_scroll_mode(true);
-        break;
-    case _TRACKBALL:
-        cocot_set_scroll_mode(false);
-        break;
-    default:
-        cocot_set_scroll_mode(false);
-        break;
-    }
-  return state;
 };
