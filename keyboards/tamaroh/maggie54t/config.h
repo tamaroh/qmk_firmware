@@ -22,3 +22,8 @@
 #define ADNS5050_SCLK_PIN D0
 #define ADNS5050_SDIO_PIN D1
 #define ADNS5050_CS_PIN   D4
+
+#define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+// only required if not setting mouse layer elsewhere
+#define AUTO_MOUSE_DEFAULT_LAYER 1
+
