@@ -90,11 +90,12 @@
                 { "label": "LGUI", "matrix": [4, 3], "w": 1.25, "x": 3.25, "y": 4.25 },
                 { "label": "Lower", "matrix": [4, 4], "x": 4.5, "y": 4.5 },
                 { "label": "SPC", "matrix": [4, 5], "w": 1.25, "x": 5.5, "y": 5 },
-                { "label": "Lclick", "matrix": [10, 5], "w": 1.25, "x": 8.25, "y": 5 },
-                { "label": "Rclick", "matrix": [10, 6], "x": 9.5, "y": 4.5 },
-                { "label": "BSPC", "matrix": [10, 7], "w": 1.25, "x": 8.25, "y": 5 },
-                { "label": "Raise", "matrix": [10, 8], "x": 9.5, "y": 4.5 },
-                { "label": "RALT", "matrix": [10, 9], "w": 1.25, "x": 10.5, "y": 4.25 }
+                { "label": "MClick", "matrix": [10, 5], "x": 7, "y": 4 },
+                { "label": "LClick", "matrix": [10, 6], "x": 6.5, "y": 3 },
+                { "label": "Rclick", "matrix": [10, 7], "x": 7.5, "y": 3 },
+                { "label": "BSPC", "matrix": [10, 8], "w": 1.25, "x": 8.25, "y": 5 },
+                { "label": "Raise", "matrix": [10, 9], "x": 9.5, "y": 4.5 },
+                { "label": "RALT", "matrix": [10, 10], "w": 1.25, "x": 10.5, "y": 4.25 }
             ]
         }
     }
