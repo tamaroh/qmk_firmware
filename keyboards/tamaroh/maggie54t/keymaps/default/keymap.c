@@ -13,7 +13,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                    KC_LGUI,   MO(1),  KC_SPC, KC_BTN1, KC_BTN3, KC_BTN2, KC_BSPC, LT(2, KC_ENT), KC_RALT
     ),
     [1] = LAYOUT(
-        _______, _______, _______, _______, _______, _______,                            KC_BTN3, KC_BTN2, _______, _______, _______, _______,
+        _______, RGB_TOG, RGB_HUI, RGB_HUD, _______, _______,                            KC_BTN3, KC_BTN2, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
         _______,    KC_LNG2, KC_LEFT, KC_UP,   KC_RGHT, KC_PGUP,                         _______, _______, _______, _______, _______, _______,
         _______,    KC_LNG1, KC_HOME, KC_DOWN, KC_END,  KC_PGDN,                         _______, _______, _______, _______, _______, _______,
@@ -39,15 +39,15 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     return false;
 }
 
-    // void pointing_device_init_user(void) {
-    //     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
-    // }
+    void pointing_device_init_user(void) {
+        set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
+    }
 void keyboard_post_init_user(void) {
   // Customise these values to desired behaviour
   debug_enable=true;
 //   debug_matrix=true;
   //debug_keyboard=true;
-  //debug_mouse=true;
+  debug_mouse=true;
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

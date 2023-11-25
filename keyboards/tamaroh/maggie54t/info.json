@@ -13,7 +13,9 @@
         "extrakey": false,
         "mousekey": true,
         "nkro": false,
-        "encoder": true
+        "encoder": true,
+        "rgblight": true,
+        "rgbmatrix": true
     },
     "matrix_pins": {
         "cols": ["F6", "F7", "B1", "B3", "B2", "B6", "C6", "D7", "E6", "B4", "B5"],
@@ -98,5 +100,16 @@
                 { "label": "RALT", "matrix": [10, 10], "w": 1.25, "x": 10.5, "y": 4.25 }
             ]
         }
+    },
+    "rgblight": {
+        "pin": "D3",
+        "led_count": 56,
+        "animations":{
+            "rgb_test": true
+        },
+        "max_brightness": 100
+    },
+    "ws2812": {
+        "pin": "D3"
     }
 }
