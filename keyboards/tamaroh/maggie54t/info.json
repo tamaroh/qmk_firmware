@@ -9,7 +9,7 @@
         "via": true,
         "bootmagic": false,
         "command": false,
-        "console": true,
+        "console": false,
         "extrakey": false,
         "mousekey": true,
         "nkro": false,
