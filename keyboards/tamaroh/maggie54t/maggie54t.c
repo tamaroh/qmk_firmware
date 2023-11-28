@@ -22,54 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "debug.h"
 #include <stdio.h>
 
-
-
-// Invert vertical scroll direction
-#ifndef COCOT_SCROLL_INV_DEFAULT
-#    define COCOT_SCROLL_INV_DEFAULT 1
-#endif
-
-#ifndef COCOT_CPI_OPTIONS
-#    define COCOT_CPI_OPTIONS { 250, 500, 750, 1000, 1250 }
-#    ifndef COCOT_CPI_DEFAULT
-#       define COCOT_CPI_DEFAULT 3
-#    endif
-#endif
-#ifndef COCOT_CPI_DEFAULT
-#    define COCOT_CPI_DEFAULT 3
-#endif
-
-#ifndef COCOT_SCROLL_DIVIDERS
-#    define COCOT_SCROLL_DIVIDERS { 1, 2, 3, 4, 5, 6 }
-#    ifndef COCOT_SCROLL_DIV_DEFAULT
-#       define COCOT_SCROLL_DIV_DEFAULT 4
-#    endif
-#endif
-#ifndef COCOT_SCROLL_DIV_DEFAULT
-#    define COCOT_SCROLL_DIV_DEFAULT 4
-#endif
-
-
-#ifndef COCOT_ROTATION_ANGLE
-#    define COCOT_ROTATION_ANGLE { -60, -45, -30, -15, 0, 15, 30, 45, 60 }
-#    ifndef COCOT_ROTATION_DEFAULT
-#       define COCOT_ROTATION_DEFAULT 1
-#    endif
-#endif
-#ifndef COCOT_ROTATION_DEFAULT
-#    define COCOT_ROTATION_DEFAULT 1
-#endif
-
-
-cocot_config_t cocot_config;
-uint16_t cpi_array[] = COCOT_CPI_OPTIONS;
-uint16_t scrl_div_array[] = COCOT_SCROLL_DIVIDERS;
-uint16_t angle_array[] = COCOT_ROTATION_ANGLE;
-#define CPI_OPTION_SIZE (sizeof(cpi_array) / sizeof(uint16_t))
-#define SCRL_DIV_SIZE (sizeof(scrl_div_array) / sizeof(uint16_t))
-#define ANGLE_SIZE (sizeof(angle_array) / sizeof(uint16_t))
-
-
 // Trackball State
 bool     BurstState        = false;  // init burst state for Trackball module
 uint16_t MotionStart       = 0;      // Timer for accel, 0 is resting state
@@ -85,18 +37,4 @@ report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
         mouse_report.y = y_rev;
 
     return pointing_device_task_user(mouse_report);
-}
-
-
-
-
-
-void eeconfig_init_kb(void) {
-    cocot_config.cpi_idx = COCOT_CPI_DEFAULT;
-    cocot_config.scrl_div = COCOT_SCROLL_DIV_DEFAULT;
-    cocot_config.rotation_angle = COCOT_ROTATION_DEFAULT;
-    cocot_config.scrl_inv = COCOT_SCROLL_INV_DEFAULT;
-    cocot_config.scrl_mode = false;
-    eeconfig_update_kb(cocot_config.raw);
-    eeconfig_init_user();
 }
