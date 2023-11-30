@@ -60,11 +60,20 @@ void keyboard_post_init_user(void) {
 // #endif 
 //   return true;
 // }
-
+float scroll_accumulated_h = 0;
+float scroll_accumulated_v = 0;
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (set_scrolling) {
-        mouse_report.h = mouse_report.x;
-        mouse_report.v = mouse_report.y;
+        scroll_accumulated_h += (float)mouse_report.x / 8;
+        scroll_accumulated_v += (float)mouse_report.y / 8;
+
+        // Assign integer parts of accumulated scroll values to the mouse report
+        mouse_report.h = (int8_t)scroll_accumulated_h;
+        mouse_report.v = (int8_t)scroll_accumulated_v;
+
+        // Update accumulated scroll values by subtracting the integer parts
+        scroll_accumulated_h -= (int8_t)scroll_accumulated_h;
+        scroll_accumulated_v -= (int8_t)scroll_accumulated_v;
         mouse_report.x = 0;
         mouse_report.y = 0;
     }
