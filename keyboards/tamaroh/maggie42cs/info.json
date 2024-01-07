@@ -11,7 +11,8 @@
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
-        "via": true
+        "via": true,
+        "rgblight": true
     },
     "matrix_pins": {
         "cols": ["GP10", "GP9", "GP8", "GP7", "GP6", "GP5"],
@@ -78,5 +79,16 @@
     },
     "tapping": {
         "hold_on_other_key_press": true
+    },
+    "ws2812": {
+        "driver": "vendor",
+        "pin": "GP16"
+    },
+    "rgblight": {
+        "led_count": 1,
+        "driver": "ws2812",
+        "animations": {
+            "rgb_test": true
+        }
     }
 }
