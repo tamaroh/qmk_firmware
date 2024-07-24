@@ -33,48 +33,48 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
-        if (clockwise) {
-            tap_code(KC_WH_U);
-        } else {
-            tap_code(KC_WH_D);
-        }
-    }
-    return false;
-}
+// bool encoder_update_user(uint8_t index, bool clockwise) {
+//     if (index == 0) { /* First encoder */
+//         if (clockwise) {
+//             tap_code(KC_WH_U);
+//         } else {
+//             tap_code(KC_WH_D);
+//         }
+//     }
+//     return false;
+// }
 
-void pointing_device_init_user(void) {
-    set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
-}
+// void pointing_device_init_user(void) {
+//     set_auto_mouse_enable(true);         // always required before the auto mouse feature will work
+// }
 
-float scroll_accumulated_h = 0;
-float scroll_accumulated_v = 0;
+// float scroll_accumulated_h = 0;
+// float scroll_accumulated_v = 0;
 
-report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
-    if (set_scrolling) {
-        scroll_accumulated_h += (float)mouse_report.x / 24;
-        scroll_accumulated_v += (float)mouse_report.y / 24;
-        // Assign integer parts of accumulated scroll values to the mouse report
-        mouse_report.h = (int8_t)scroll_accumulated_h;
-        mouse_report.v = (int8_t)scroll_accumulated_v;
-        // Update accumulated scroll values by subtracting the integer parts
-        scroll_accumulated_h -= (int8_t)scroll_accumulated_h;
-        scroll_accumulated_v -= (int8_t)scroll_accumulated_v;
-        mouse_report.x = 0;
-        mouse_report.y = 0;
-    }
-    return mouse_report;
-}
+// report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+//     if (set_scrolling) {
+//         scroll_accumulated_h += (float)mouse_report.x / 24;
+//         scroll_accumulated_v += (float)mouse_report.y / 24;
+//         // Assign integer parts of accumulated scroll values to the mouse report
+//         mouse_report.h = (int8_t)scroll_accumulated_h;
+//         mouse_report.v = (int8_t)scroll_accumulated_v;
+//         // Update accumulated scroll values by subtracting the integer parts
+//         scroll_accumulated_h -= (int8_t)scroll_accumulated_h;
+//         scroll_accumulated_v -= (int8_t)scroll_accumulated_v;
+//         mouse_report.x = 0;
+//         mouse_report.y = 0;
+//     }
+//     return mouse_report;
+// }
 
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case DRAG_SCROLL:
-            // Toggle set_scrolling when DRAG_SCROLL key is pressed or released
-            set_scrolling = record->event.pressed;
-            break;
-        default:
-            break;
-    }
-    return true;
-}
+// bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case DRAG_SCROLL:
+//             // Toggle set_scrolling when DRAG_SCROLL key is pressed or released
+//             set_scrolling = record->event.pressed;
+//             break;
+//         default:
+//             break;
+//     }
+//     return true;
+// }
