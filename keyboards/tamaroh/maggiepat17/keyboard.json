@@ -13,8 +13,8 @@
         "nkro": true
     },
     "matrix_pins": {
-        "cols": ["GP11", "GP12", "GP13", "GP14"],
-        "rows": ["GP02", "GP03", "GP04", "GP04", "GP05"]
+        "cols": ["GP11", "GP12", "GP13", "GP14", "GP15"],
+        "rows": ["GP2", "GP3", "GP4", "GP5"]
     },
     "processor": "RP2040",
     "url": "",
@@ -24,7 +24,7 @@
         "vid": "0x1234"
     },
     "layouts": {
-        "LAYOUT_numpad_5x4": {
+        "LAYOUT": {
             "layout": [
                 { "label": "Esc", "matrix": [0, 0], "x": 0, "y": 0 },
                 { "label": "w", "matrix": [0, 2], "x": 2, "y": 0 },
