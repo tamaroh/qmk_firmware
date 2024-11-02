@@ -1,6 +1,6 @@
 {
     "manufacturer": "Tamaroh",
-    "keyboard_name": "tamaroh/maggiepat17",
+    "keyboard_name": "maggiepat17",
     "maintainer": "Tamaroh",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
@@ -10,7 +10,8 @@
         "console": false,
         "extrakey": true,
         "mousekey": true,
-        "nkro": true
+        "nkro": true,
+        "via": true
     },
     "matrix_pins": {
         "cols": ["GP11", "GP12", "GP13", "GP14", "GP15"],
