@@ -22,7 +22,7 @@
     "url": "",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x0005",
+        "pid": "0x0007",
         "vid": "0x1234"
     },
     "layouts": {
