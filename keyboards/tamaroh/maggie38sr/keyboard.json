@@ -3,7 +3,6 @@
     "maintainer": "Tamaroh",
     "manufacturer": "Tamaroh",
     "url": "",
-    "development_board": "promicro",
     "processor": "RP2040",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
