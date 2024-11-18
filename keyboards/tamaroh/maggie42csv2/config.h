@@ -19,3 +19,4 @@
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 #define SERIAL_PIO_USE_PIO0
+#define USB_VBUS_PIN GP24
