@@ -26,15 +26,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 bool     BurstState        = false;  // init burst state for Trackball module
 uint16_t MotionStart       = 0;      // Timer for accel, 0 is resting state
 
-// report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
+report_mouse_t pointing_device_task_kb(report_mouse_t mouse_report) {
 
-//     // double rad = angle_array[cocot_config.rotation_angle] * (M_PI / 180) * -1;
-//     double rad = 45 * (M_PI / 180) * -1;
-//     int8_t x_rev =  + mouse_report.x * cos(rad) - mouse_report.y * sin(rad);
-//     int8_t y_rev =  + mouse_report.x * sin(rad) + mouse_report.y * cos(rad);
+    // double rad = angle_array[cocot_config.rotation_angle] * (M_PI / 180) * -1;
+    double rad = 45 * (M_PI / 180) * -1;
+    int8_t x_rev =  + mouse_report.x * cos(rad) - mouse_report.y * sin(rad);
+    int8_t y_rev =  + mouse_report.x * sin(rad) + mouse_report.y * cos(rad);
 
-//         mouse_report.x = x_rev;
-//         mouse_report.y = y_rev;
+        mouse_report.x = x_rev;
+        mouse_report.y = y_rev;
 
-//     return pointing_device_task_user(mouse_report);
-// }
+    return pointing_device_task_user(mouse_report);
+}
