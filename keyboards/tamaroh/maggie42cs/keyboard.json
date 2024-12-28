@@ -1,6 +1,6 @@
 {
     "manufacturer": "Tamaroh",
-    "keyboard_name": "tamaroh/maggie42cs",
+    "keyboard_name": "Maggie42cs",
     "maintainer": "Tamaroh",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
@@ -12,17 +12,17 @@
         "mousekey": true,
         "nkro": true,
         "via": true,
-        "rgblight": true
+        "rgblight": false
     },
     "matrix_pins": {
-        "cols": ["GP10", "GP9", "GP8", "GP7", "GP6", "GP5"],
-        "rows": ["GP27", "GP26", "GP15", "GP14"]
+        "cols": ["GP8", "GP9", "GP10", "GP11", "GP12", "GP13"],
+        "rows": ["GP2", "GP3", "GP4", "GP5"]
     },
     "processor": "RP2040",
     "url": "",
     "usb": {
-        "device_version": "1.0.0",
-        "pid": "0x0007",
+        "device_version": "2.0.1",
+        "pid": "0x0008",
         "vid": "0x1234"
     },
     "layouts": {
@@ -79,16 +79,5 @@
     },
     "tapping": {
         "hold_on_other_key_press": true
-    },
-    "ws2812": {
-        "driver": "vendor",
-        "pin": "GP16"
-    },
-    "rgblight": {
-        "led_count": 1,
-        "driver": "ws2812",
-        "animations": {
-            "rgb_test": true
-        }
     }
 }
